@@ -8,12 +8,12 @@ router.get("/",function(req, res) {
     if (req.query.host !== undefined) {
         //ping host
         const host = req.query.host;
-        if (os.platform() === 'linux') {
-            //linux
-            cmd = "ping -c 3 " + host;
+        if (os.platform() === 'win32') {
+            //win32
+            cmd = "ping -n 3 " + host;  
         } else {
-            //windows
-            cmd = "ping -n 3 " + host;            
+            //linux based
+            cmd = "ping -c 3 " + host;
         }
     } else {
         return;
