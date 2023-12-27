@@ -14,13 +14,13 @@ Host can be a hostname, or IP. If using IP, it will be local to the hosting serv
 ```
 {
   "status":"online"
-  "time":2.12
+  "time":"2.12"
 }
 
 or
 {
   "status":"offline"
-  "time":0
+  "time":"0"
 }
 ```
 
