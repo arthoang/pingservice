@@ -1,6 +1,6 @@
-# Dockerfile
-
-FROM node:19-bullseye
+FROM node:latest
+RUN apt-get update && \
+    apt-get install -y iputils-ping
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
 COPY src/package.json src/package-lock.json .
